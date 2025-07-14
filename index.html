@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Kaushik | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: linear-gradient(to right, #000000, #ffcc00);
+      --text: #fff;
+      --accent: #64ffda;
+      --section-bg: rgba(0, 0, 0, 0.7);
+    }
+    body.light {
+      --bg: #f0f0f0;
+      --text: #111;
+      --accent: #00695c;
+      --section-bg: #ffffff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: all 0.4s ease;
+    }
+    header {
+      background: var(--section-bg);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.3rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+    nav a:hover {
+      background: var(--accent);
+      color: var(--bg);
+      transform: scale(1.1);
+    }
+    #themeToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      color: var(--accent);
+      font-size: 1.4rem;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    section {
+      display: none;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    ul li { margin-left: 1.5rem; }
+    footer {
+      background: var(--section-bg);
+      color: #bbb;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .floating-icons {
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+    }
+    .floating-icons a {
+      color: var(--accent);
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .floating-icons a:hover {
+      transform: scale(1.3);
+    }
+    #resumeBtn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #resumeBtn:hover {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+    form button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      background-color: var(--accent);
+      color: var(--bg);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="themeToggle"><i class="fas fa-moon"></i></button>
+  <div class="floating-icons">
+    <a href="https://www.linkedin.com/in/vaibhav-kaushik-b09702292" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://leetcode.com/vaibhavkubc/" target="_blank"><i class="fas fa-code"></i></a>
+  </div>  <header>
+    <h1 id="typed"></h1>
+    <p>📞 9058258897 | 📧 <a href="mailto:vaibhkubc@gmail.com">vaibhkubc@gmail.com</a></p>
+    <button id="resumeBtn" onclick="window.open('Vaibhav_Kaushik_Resume.pdf')">Download Resume</button>
+    <nav>
+      <a href="#" onclick="showTab('summary')">Summary</a>
+      <a href="#" onclick="showTab('experience')">Experience</a>
+      <a href="#" onclick="showTab('projects')">Projects</a>
+      <a href="#" onclick="showTab('certifications')">Certifications</a>
+      <a href="#" onclick="showTab('skills')">Skills</a>
+      <a href="#" onclick="showTab('education')">Education</a>
+      <a href="#" onclick="showTab('contact')">Contact</a>
+    </nav>
+  </header>  <section id="summary" class="active">
+    <h2>Summary</h2>
+    <p>Tech-savvy Computer Science student with experience in IoT, data analytics, and web development. Skilled in Java, Python, and DSA with a passion for solving real-world problems.</p>
+  </section>  <section id="experience">
+    <h2>Experience</h2>
+    <h3>IoT Developer (Team Project) - Smart Plant Health Monitoring</h3>
+    <p>Mar 2024 - May 2024</p>
+    <ul>
+      <li>Built an IoT system using sensors to monitor plant health.</li>
+      <li>Handled microcontroller programming and sensor integration.</li>
+    </ul>
+    <h3>Data Analysis Intern - SkillCred</h3>
+    <p>July 2024</p>
+    <ul>
+      <li>Analyzed OTT promo data using Excel and Power BI.</li>
+      <li>Delivered business insights via dashboards.</li>
+    </ul>
+  </section>  <section id="projects">
+    <h2>Projects</h2>
+    <h3>Stock Price Prediction Model</h3>
+    <p>Developed a stock predictor using Linear Regression on historical data.</p>
+  </section>  <section id="skills">
+    <h2>Skills</h2>
+    <p>Java, Python, HTML, CSS, MySQL, DSA, Power BI, Excel, VS Code, Eclipse, Jupyter Notebook</p>
+    <p>LeetCode: <a href="https://leetcode.com/vaibhavkubc/" target="_blank">https://leetcode.com/vaibhavkubc/</a></p>
+  </section>  <section id="education">
+    <h2>Education</h2>
+    <p>B.Tech in Computer Science & Engineering (AIML/IIoT)<br>GLA University, Mathura (2023 – 2027)</p>
+    <p><strong>Address:</strong> Goverdhan, Mathura, Uttar Pradesh</p>
+  </section>  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mnqedjzp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 Vaibhav Kaushik. All rights reserved.</p>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      const icon = document.querySelector('#themeToggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    document.getElementById('typed').textContent = 'Vaibhav Kaushik';
+  </script></body>
+</html>
