@@ -1,22 +1,30 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaibhav Kaushik | Portfolio</title>
+  <meta name="description" content="Portfolio of Vaibhav Kaushik - Computer Science Student skilled in Java, Python, and Web Development.">
+  <meta name="author" content="Vaibhav Kaushik">
+  <meta name="keywords" content="Vaibhav Kaushik, Portfolio, Java, Python, Web Development, IoT, DSA">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     :root {
-      --bg: linear-gradient(to right, #000000, #ffcc00);
+      --bg: linear-gradient(to right, #1a1a1a, #005f73);
       --text: #fff;
-      --accent: #64ffda;
-      --section-bg: rgba(0, 0, 0, 0.7);
+      --accent: #00d9a3;
+      --section-bg: rgba(0, 0, 0, 0.6);
+      --highlight-bg: linear-gradient(to right, #f9c5d1, #fbc2eb);
+      --highlight-text: #880e4f;
     }
     body.light {
-      --bg: #f0f0f0;
+      --bg: #fefefe;
       --text: #111;
-      --accent: #00695c;
+      --accent: #00796b;
       --section-bg: #ffffff;
+      --highlight-bg: #fde0f0;
+      --highlight-text: #c2185b;
     }
     * {
       margin: 0;
@@ -159,16 +167,41 @@
       font-weight: bold;
       cursor: pointer;
     }
+    .extras {
+      margin-top: 3rem;
+      background: var(--highlight-bg);
+      padding: 1.5rem;
+      border-radius: 15px;
+      color: var(--highlight-text);
+    }
+    .extras h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .extras ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    .extras ul li::before {
+      content: \"\\2022\";
+      color: var(--highlight-text);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
   </style>
 </head>
 <body>
   <button id="themeToggle"><i class="fas fa-moon"></i></button>
+
   <div class="floating-icons">
     <a href="https://www.linkedin.com/in/vaibhav-kaushik-b09702292" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
     <a href="https://leetcode.com/vaibhavkubc/" target="_blank"><i class="fas fa-code"></i></a>
-  </div>  <header>
-    <h1 id="typed"></h1>
+  </div>
+
+  <header>
+    <h1 id="typed">Vaibhav Kaushik</h1>
     <p>📞 9058258897 | 📧 <a href="mailto:vaibhkubc@gmail.com">vaibhkubc@gmail.com</a></p>
     <button id="resumeBtn" onclick="window.open('Vaibhav_Kaushik_Resume.pdf')">Download Resume</button>
     <nav>
@@ -180,36 +213,58 @@
       <a href="#" onclick="showTab('education')">Education</a>
       <a href="#" onclick="showTab('contact')">Contact</a>
     </nav>
-  </header>  <section id="summary" class="active">
+  </header>
+
+  <section id="summary" class="active">
     <h2>Summary</h2>
-    <p>Tech-savvy Computer Science student with experience in IoT, data analytics, and web development. Skilled in Java, Python, and DSA with a passion for solving real-world problems.</p>
-  </section>  <section id="experience">
+    <p>Tech-savvy Computer Science student with hands-on experience in IoT, data analytics, and full-stack development. Proficient in Java, Python, and DSA with a problem-solving mindset and eagerness to build real-world products.</p>
+  </section>
+
+  <section id="experience">
     <h2>Experience</h2>
     <h3>IoT Developer (Team Project) - Smart Plant Health Monitoring</h3>
     <p>Mar 2024 - May 2024</p>
     <ul>
-      <li>Built an IoT system using sensors to monitor plant health.</li>
-      <li>Handled microcontroller programming and sensor integration.</li>
+      <li>Built an IoT system using sensors to monitor temperature, humidity, and soil moisture for plant health.</li>
+      <li>Worked with Arduino & ESP8266, wrote embedded C code for real-time monitoring.</li>
+      <li>Integrated data to cloud and created visualizations.</li>
     </ul>
     <h3>Data Analysis Intern - SkillCred</h3>
     <p>July 2024</p>
     <ul>
-      <li>Analyzed OTT promo data using Excel and Power BI.</li>
-      <li>Delivered business insights via dashboards.</li>
+      <li>Analyzed OTT marketing promo performance using Excel and Power BI.</li>
+      <li>Built dashboards and presented insights to the business team.</li>
     </ul>
-  </section>  <section id="projects">
+  </section>
+
+  <section id="projects">
     <h2>Projects</h2>
     <h3>Stock Price Prediction Model</h3>
-    <p>Developed a stock predictor using Linear Regression on historical data.</p>
-  </section>  <section id="skills">
-    <h2>Skills</h2>
+    <p>Developed a predictive model using Linear Regression on historical stock data fetched via Yahoo API. Cleaned data using Pandas and visualized trends using Matplotlib and Seaborn. Achieved good accuracy for short-term forecasting.</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Python for Data Science - NPTEL (2023)</li>
+      <li>Power BI Dashboarding - SkillUp (2024)</li>
+      <li>Web Development Bootcamp - Udemy (2024)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
     <p>Java, Python, HTML, CSS, MySQL, DSA, Power BI, Excel, VS Code, Eclipse, Jupyter Notebook</p>
-    <p>LeetCode: <a href="https://leetcode.com/vaibhavkubc/" target="_blank">https://leetcode.com/vaibhavkubc/</a></p>
-  </section>  <section id="education">
+    <p>LeetCode: <a href="https://leetcode.com/vaibhavkubc/" target="_blank">leetcode.com/vaibhavkubc</a></p>
+  </section>
+
+  <section id="education">
     <h2>Education</h2>
     <p>B.Tech in Computer Science & Engineering (AIML/IIoT)<br>GLA University, Mathura (2023 – 2027)</p>
     <p><strong>Address:</strong> Goverdhan, Mathura, Uttar Pradesh</p>
-  </section>  <section id="contact">
+  </section>
+
+  <section id="contact">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/mnqedjzp" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -217,9 +272,35 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </section>  <footer>
+  </section>
+
+  <div class="extras">
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Self-Motivated</li>
+      <li>Social</li>
+      <li>Communication</li>
+      <li>Adaptability</li>
+    </ul>
+    <h3>Hobbies</h3>
+    <ul>
+      <li>Traveling</li>
+      <li>Photography</li>
+      <li>Crafting</li>
+      <li>Gaming</li>
+    </ul>
+    <h3>Skills</h3>
+    <ul>
+      <li>Java, Python, HTML/CSS</li>
+      <li>DSA, Power BI, Excel</li>
+    </ul>
+  </div>
+
+  <footer>
     <p>&copy; 2025 Vaibhav Kaushik. All rights reserved.</p>
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>  <script>
+  </footer>
+
+  <script>
     function showTab(tabId) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('active');
@@ -235,5 +316,6 @@
     });
 
     document.getElementById('typed').textContent = 'Vaibhav Kaushik';
-  </script></body>
+  </script>
+</body>
 </html>
